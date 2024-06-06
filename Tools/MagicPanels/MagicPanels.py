@@ -33,10 +33,8 @@ import FreeCAD, FreeCADGui
 from PySide import QtGui
 from PySide import QtCore
 
+QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
 translate = FreeCAD.Qt.translate
-
-def QT_TRANSLATE_NOOP(context, text): #
-	return text
 
 
 # ###################################################################################################################

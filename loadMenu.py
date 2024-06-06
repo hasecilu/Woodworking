@@ -1,13 +1,11 @@
 import FreeCAD
-translate = FreeCAD.Qt.translate
-
-def QT_TRANSLATE_NOOP(context, text):
-	return text
-
 import FreeCADGui
 
 import os, sys
 import fakemodule
+
+QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
+
 path = os.path.dirname(fakemodule.__file__)
 iconPath = os.path.join(path, "Icons")
 
@@ -17,8 +15,8 @@ class DOCS():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Woodworking at FreeCAD - woodworking workbench documentation'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
+				"MenuText": QT_TRANSLATE_NOOP('DOCS', 'Woodworking at FreeCAD - woodworking workbench documentation'),
+				"ToolTip" : QT_TRANSLATE_NOOP('DOCS', 'Opens web browser with external link.'),
 				"Accel"   : ""}
 
 	def Activated(self):
@@ -40,8 +38,8 @@ class EXAMPLES():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Woodworking at FreeCAD - fully parametric examples'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
+				"MenuText": QT_TRANSLATE_NOOP('EXAMPLES', 'Woodworking at FreeCAD - fully parametric examples'),
+				"ToolTip" : QT_TRANSLATE_NOOP('EXAMPLES', 'Opens web browser with external link.'),
 				"Accel"   : ""}
 
 	def Activated(self):
@@ -63,8 +61,8 @@ class FIXTURE():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Woodworking at FreeCAD - fixture examples'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
+				"MenuText": QT_TRANSLATE_NOOP('FIXTURE', 'Woodworking at FreeCAD - fixture examples'),
+				"ToolTip" : QT_TRANSLATE_NOOP('FIXTURE', 'Opens web browser with external link.'),
 				"Accel"   : ""}
 
 	def Activated(self):
@@ -86,8 +84,8 @@ class TEXTURES():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Woodworking at FreeCAD - free woodworking textures'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
+				"MenuText": QT_TRANSLATE_NOOP('TEXTURES', 'Woodworking at FreeCAD - free woodworking textures'),
+				"ToolTip" : QT_TRANSLATE_NOOP('TEXTURES', 'Opens web browser with external link.'),
 				"Accel"   : ""}
 
 	def Activated(self):
@@ -109,8 +107,8 @@ class DOCSgetDimensions():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Tool documentation - getDimensions, cut-list, BOM'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
+				"MenuText": QT_TRANSLATE_NOOP('DOCSgetDimensions', 'Tool documentation - getDimensions, cut-list, BOM'),
+				"ToolTip" : QT_TRANSLATE_NOOP('DOCSgetDimensions', 'Opens web browser with external link.'),
 				"Accel"   : ""}
 
 	def Activated(self):
@@ -132,8 +130,8 @@ class DOCSsheet2export():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Tool documentation - sheet2export'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
+				"MenuText": QT_TRANSLATE_NOOP('DOCSsheet2export', 'Tool documentation - sheet2export'),
+				"ToolTip" : QT_TRANSLATE_NOOP('DOCSsheet2export', 'Opens web browser with external link.'),
 				"Accel"   : ""}
 
 	def Activated(self):
@@ -155,8 +153,8 @@ class DOCSsetTextures():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Tool documentation - setTextures'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
+				"MenuText": QT_TRANSLATE_NOOP('DOCSsetTextures', 'Tool documentation - setTextures'),
+				"ToolTip" : QT_TRANSLATE_NOOP('DOCSsetTextures', 'Opens web browser with external link.'),
 				"Accel"   : ""}
 
 	def Activated(self):
@@ -178,8 +176,8 @@ class DOCSscanObjects():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Tool documentation - scanObjects'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
+				"MenuText": QT_TRANSLATE_NOOP('DOCSscanObjects', 'Tool documentation - scanObjects'),
+				"ToolTip" : QT_TRANSLATE_NOOP('DOCSscanObjects', 'Opens web browser with external link.'),
 				"Accel"   : ""}
 
 	def Activated(self):
@@ -224,8 +222,8 @@ class AUTOUPDATE():
 
 	def GetResources(self):
 		return {"Pixmap"  : os.path.join(iconPath, "autoupdate.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Download and update all macro tools'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Download latest versions for all macro tools.'),
+				"MenuText": QT_TRANSLATE_NOOP('AUTOUPDATE', 'Download and update all macro tools'),
+				"ToolTip" : QT_TRANSLATE_NOOP('AUTOUPDATE', 'Download latest versions for all macro tools.'),
 				"Accel"   : ""}
 
 	def Activated(self):
